@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Planner | Галерија</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Travel Planner</div>
+        <nav>
+            <a href="index.html">Почетна</a>
+            <a href="galerija.html" class="aktiven">Галерија</a>
+            <a href="blog.html">Блог</a>
+            <a href="anketa.html">Анкета</a>
+        </nav>
+
+        <div class="najava">
+            <form id="forma-najava">
+                <input type="text" id="korisnik" placeholder="Корисничко име">
+                <input type="password" id="lozinka" placeholder="Лозинка">
+                <input type="submit" value="Најава" class="kopce">
+                <input type="button" id="kopce-registracija" value="Регистрација">
+            </form>
+            <p id="najaven" class="skrieno">
+                <span id="pozdrav"></span>
+                <input type="button" id="kopce-odjava" value="Одјава">
+            </p>
+        </div>
+    </header>
+
+    <section class="hero hero-mal">
+        <h1>Галерија</h1>
+        <p>Отвори град за да ги видиш сликите, остави коментар и гласај.</p>
+    </section>
+
+    <div id="sodrzina">
+
+        <details class="grad" open>
+            <summary>Охрид</summary>
+
+            <div class="sliki">
+                <img src="sliki/ohrid1.jpg" alt="Охрид 1">
+                <img src="sliki/ohrid2.jpg" alt="Охрид 2">
+                <img src="sliki/ohrid3.jpg" alt="Охрид 3">
+                <img src="sliki/ohrid4.jpg" alt="Охрид 4">
+            </div>
+
+            <div class="glasanje">
+                <input type="button" id="like-ohrid" class="kopce-like" value="Like">
+                <span id="broj-like-ohrid">0</span>
+                <input type="button" id="dislike-ohrid" class="kopce-dislike" value="Dislike">
+                <span id="broj-dislike-ohrid">0</span>
+            </div>
+
+            <div class="komentari">
+                <h4>Коментари</h4>
+                <p>
+                    <input type="text" id="komentar-ohrid" placeholder="Напиши коментар...">
+                    <input type="button" id="kopce-komentar-ohrid" value="Објави" class="kopce">
+                </p>
+                <ul id="lista-komentari-ohrid"></ul>
+            </div>
+        </details>
+
+        <details class="grad">
+            <summary>Скопје</summary>
+
+            <div class="sliki">
+                <img src="sliki/skopje1.jpg" alt="Скопје 1">
+                <img src="sliki/skopje2.jpg" alt="Скопје 2">
+                <img src="sliki/skopje3.jpg" alt="Скопје 3">
+                <img src="sliki/skopje4.jpg" alt="Скопје 4">
+            </div>
+
+            <div class="glasanje">
+                <input type="button" id="like-skopje" class="kopce-like" value="Like">
+                <span id="broj-like-skopje">0</span>
+                <input type="button" id="dislike-skopje" class="kopce-dislike" value="Dislike">
+                <span id="broj-dislike-skopje">0</span>
+            </div>
+
+            <div class="komentari">
+                <h4>Коментари</h4>
+                <p>
+                    <input type="text" id="komentar-skopje" placeholder="Напиши коментар...">
+                    <input type="button" id="kopce-komentar-skopje" value="Објави" class="kopce">
+                </p>
+                <ul id="lista-komentari-skopje"></ul>
+            </div>
+        </details>
+
+        <details class="grad">
+            <summary>Париз</summary>
+
+            <div class="sliki">
+                <img src="sliki/paris1.jpg" alt="Париз 1">
+                <img src="sliki/paris2.jpg" alt="Париз 2">
+                <img src="sliki/paris3.jpg" alt="Париз 3">
+                <img src="sliki/paris4.jpg" alt="Париз 4">
+            </div>
+
+            <div class="glasanje">
+                <input type="button" id="like-pariz" class="kopce-like" value="Like">
+                <span id="broj-like-pariz">0</span>
+                <input type="button" id="dislike-pariz" class="kopce-dislike" value="Dislike">
+                <span id="broj-dislike-pariz">0</span>
+            </div>
+
+            <div class="komentari">
+                <h4>Коментари</h4>
+                <p>
+                    <input type="text" id="komentar-pariz" placeholder="Напиши коментар...">
+                    <input type="button" id="kopce-komentar-pariz" value="Објави" class="kopce">
+                </p>
+                <ul id="lista-komentari-pariz"></ul>
+            </div>
+        </details>
+
+        <details class="grad">
+            <summary>Рим</summary>
+
+            <div class="sliki">
+                <img src="sliki/rim1.jpg" alt="Рим 1">
+                <img src="sliki/rim2.jpg" alt="Рим 2">
+                <img src="sliki/rim3.jpg" alt="Рим 3">
+                <img src="sliki/rim4.jpg" alt="Рим 4">
+            </div>
+
+            <div class="glasanje">
+                <input type="button" id="like-rim" class="kopce-like" value="Like">
+                <span id="broj-like-rim">0</span>
+                <input type="button" id="dislike-rim" class="kopce-dislike" value="Dislike">
+                <span id="broj-dislike-rim">0</span>
+            </div>
+
+            <div class="komentari">
+                <h4>Коментари</h4>
+                <p>
+                    <input type="text" id="komentar-rim" placeholder="Напиши коментар...">
+                    <input type="button" id="kopce-komentar-rim" value="Објави" class="kopce">
+                </p>
+                <ul id="lista-komentari-rim"></ul>
+            </div>
+        </details>
+
+    </div>
+
+    <footer>
+        <p>Travel Planner &copy; 2026 · Основи на WEB програмирање</p>
+        <p><a href="index.html">Почетна</a> · <a href="galerija.html">Галерија</a> · <a href="blog.html">Блог</a> · <a href="anketa.html">Анкета</a></p>
+    </footer>
+
+    <script src="js/korisnici.js"></script>
+    <script src="js/galerija.js"></script>
+</body>
+</html>

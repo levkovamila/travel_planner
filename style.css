@@ -1,0 +1,578 @@
+/* =========================================
+   Travel Planner - заеднички стил
+   Топли бои (соседни на кругот на бои):
+     #2e1a12 кафеава, #6b1f1f бордо, #b5441b 'рѓа, #e08a2c портокалова, #f2c14e жолта
+   Една ладна боја, спротивна на портокаловата (комплементарна):
+     #1f6f78 петролеј сина, за категории, табела и второто копче
+   Позадини: #faf3e8 крем, #fff1dc светло праска
+   ========================================= */
+
+/* ---------- Општо ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #faf3e8;
+    color: #2e1a12;
+}
+
+#sodrzina {
+    width: 85%;
+    margin: 30px auto;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #6b1f1f;
+}
+
+a {
+    color: #b5441b;
+}
+
+.skrieno {
+    display: none;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: #2e1a12;
+    color: white;
+    padding: 14px 7.5%;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #f2c14e;
+}
+
+nav {
+    float: left;
+    margin-left: 40px;
+    padding-top: 6px;
+}
+
+nav a {
+    color: #d8c9bd;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #f2c14e;
+}
+
+nav a.aktiven {
+    color: #f2c14e;
+    font-weight: bold;
+}
+
+/* Најава во header */
+.najava {
+    float: right;
+}
+
+.najava input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    width: 130px;
+}
+
+.najava input.kopce {
+    width: auto;
+    padding: 5px 12px;
+}
+
+#najaven {
+    margin: 0;
+}
+
+#pozdrav {
+    font-weight: bold;
+    color: #f2c14e;
+    margin-right: 10px;
+}
+
+/* второстепени копчиња во header-от: без позадина, со светла рамка */
+.najava input#kopce-registracija, .najava input#kopce-odjava {
+    width: auto;
+    background-color: #2e1a12;
+    color: #f2c14e;
+    border: 1px solid #f2c14e;
+    padding: 5px 12px;
+}
+
+/* ---------- Регистрација ---------- */
+#forma-registracija p {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+#forma-registracija p.greska {
+    clear: both;
+    float: none;
+}
+
+#forma-registracija input.kopce {
+    margin-top: 20px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background-color: #6b1f1f;
+    background-image: radial-gradient(circle at 50% 120%, rgba(255, 214, 120, 0.95) 0%, rgba(242, 193, 78, 0.6) 15%, rgba(224, 138, 44, 0) 45%),
+                      linear-gradient(to bottom, #2e1a12 0%, #6b1f1f 35%, #b5441b 70%, #e08a2c 100%);
+    color: white;
+    padding: 50px 7.5%;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 2.6em;
+    margin: 30px 0 10px 0;
+    text-shadow: 2px 2px 6px rgba(46, 26, 18, 0.6);
+}
+
+.hero-tekst {
+    float: left;
+    width: 50%;
+}
+
+.hero-slika {
+    float: right;
+    width: 360px;
+    margin: 0 20px 0 0;
+    transform: rotate(3deg);
+    transition: transform 0.3s;
+}
+
+.hero-slika:hover {
+    transform: rotate(0deg);
+}
+
+.hero-slika img {
+    width: 100%;
+    border: 8px solid white;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(46, 26, 18, 0.5);
+}
+
+.hero-slika figcaption {
+    color: white;
+    padding-top: 8px;
+}
+
+.hero-mal {
+    padding: 30px 7.5%;
+    text-align: center;
+}
+
+.hero-mal h1 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.kopce-golemo {
+    display: block;
+    width: 210px;
+    margin-top: 20px;
+    padding: 12px 0;
+    background-color: white;
+    color: #b5441b;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.kopce-golemo:hover {
+    background-color: #f2c14e;
+    color: #2e1a12;
+}
+
+/* ---------- Полиња и копчиња ---------- */
+input, select, textarea {
+    padding: 7px;
+    border: 1px solid #d9c3a5;
+    border-radius: 8px;
+    font-size: 0.95em;
+}
+
+.kopce {
+    background-image: linear-gradient(to right, #b5441b, #e08a2c);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-weight: bold;
+}
+
+.kopce:hover {
+    background-image: linear-gradient(to right, #94381a, #c97520);
+}
+
+.greska {
+    color: #b00020;
+    font-weight: bold;
+}
+
+/* ---------- Листа со градови ---------- */
+.gradovi {
+    overflow: hidden;
+}
+
+.karticka {
+    float: left;
+    width: 46%;
+    margin: 0 1.5% 18px 1.5%;
+    background-color: white;
+    border: 1px solid #ecdcc6;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: background-color 0.2s;
+}
+
+.karticka:hover {
+    background-color: #fff1dc;
+    border: 1px solid #e08a2c;
+}
+
+.karticka-slika {
+    float: left;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.karticka-slika img {
+    width: 100%;
+}
+
+.karticka-tekst {
+    margin-left: 165px;
+    padding: 8px 12px 8px 0;
+    height: 84px;
+}
+
+.karticka-tekst h3 {
+    margin: 2px 0;
+    font-size: 1.2em;
+    color: #6b1f1f;
+}
+
+.karticka-tekst p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #5c4a3c;
+}
+
+.kategorija {
+    float: right;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #1f6f78;
+}
+
+.karticka-tekst p.cena {
+    font-weight: bold;
+    color: #b5441b;
+}
+
+/* ---------- Планер ---------- */
+.panel {
+    background-color: white;
+    border: 1px solid #ecdcc6;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.panel h3 {
+    margin-top: 0;
+    color: #6b1f1f;
+}
+
+.panel p {
+    font-size: 0.9em;
+}
+
+/* формата за внес има топла позадина, за да се разликува од листата */
+#forma-destinacija {
+    background-color: #fff1dc;
+    border: 1px solid #f0d2a6;
+}
+
+#forma-destinacija p {
+    float: left;
+    margin: 0 12px 10px 0;
+}
+
+#forma-destinacija p.greska {
+    clear: both;
+    float: none;
+}
+
+#forma-destinacija input, #forma-destinacija select {
+    width: 110px;
+}
+
+#forma-destinacija input.kopce {
+    width: auto;
+    margin-top: 20px;
+}
+
+.filtri {
+    overflow: hidden;
+}
+
+.filtri p {
+    float: left;
+    margin: 0 15px 10px 0;
+}
+
+/* второто копче е во комплементарната боја */
+#kopce-filtriraj {
+    background-image: none;
+    background-color: #1f6f78;
+}
+
+#kopce-filtriraj:hover {
+    background-color: #175158;
+}
+
+.filtri input.kopce {
+    margin-top: 20px;
+}
+
+/* ---------- Табела ---------- */
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #1f6f78;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #ecdcc6;
+}
+
+tfoot td {
+    font-weight: bold;
+    background-color: #fff1dc;
+    color: #6b1f1f;
+}
+
+tbody tr:hover {
+    background-color: #faf3e8;
+}
+
+.prazno {
+    color: #888888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ---------- Галерија ---------- */
+.grad {
+    background-color: white;
+    border: 1px solid #ecdcc6;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.grad summary {
+    padding: 14px 18px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6b1f1f;
+    border-radius: 14px;
+}
+
+.grad summary:hover {
+    background-color: #fff1dc;
+}
+
+.sliki {
+    overflow: hidden;
+    padding: 15px;
+}
+
+.sliki img {
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+    border-radius: 8px;
+}
+
+.glasanje {
+    padding: 0 15px;
+}
+
+.glasanje span {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.kopce-like, .kopce-dislike {
+    background-color: white;
+    border: 1px solid #1f6f78;
+    color: #1f6f78;
+    border-radius: 8px;
+}
+
+.kopce-like:hover, .kopce-dislike:hover {
+    background-color: #1f6f78;
+    color: white;
+}
+
+.komentari {
+    padding: 0 15px 15px 15px;
+}
+
+.komentari ul {
+    padding: 0;
+}
+
+.komentari li {
+    list-style: none;
+    background-color: #faf3e8;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 6px;
+}
+
+/* ---------- Блог ---------- */
+.blog {
+    overflow: hidden;
+}
+
+nav.sodrzina {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+nav.sodrzina h3 {
+    margin-top: 0;
+}
+
+nav.sodrzina a {
+    color: #b5441b;
+    margin: 0;
+}
+
+nav.sodrzina a:hover {
+    color: #b5441b;
+    text-decoration: underline;
+}
+
+nav.sodrzina li {
+    margin-bottom: 8px;
+}
+
+.statii {
+    float: right;
+    width: 75%;
+}
+
+.statija {
+    background-color: white;
+    border: 1px solid #ecdcc6;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    padding: 0 25px 20px 25px;
+}
+
+.statija figure {
+    margin: 0 -25px;
+}
+
+.statija img {
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #888888;
+    font-size: 0.85em;
+}
+
+.statija h2 {
+    border-bottom: none;
+}
+
+.datum {
+    color: #1f6f78;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.citat {
+    font-style: italic;
+    color: #555555;
+}
+
+/* ---------- Анкета ---------- */
+.anketa {
+    width: 60%;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #ecdcc6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #1f6f78;
+    padding: 0 8px;
+}
+
+#rezultat-anketa {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#rezultat-tekst {
+    font-weight: bold;
+    color: #1f6f78;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #2e1a12;
+    color: #d8c9bd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+footer a {
+    color: #f2c14e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

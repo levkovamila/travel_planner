@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Planner | Блог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Travel Planner</div>
+        <nav>
+            <a href="index.html">Почетна</a>
+            <a href="galerija.html">Галерија</a>
+            <a href="blog.html" class="aktiven">Блог</a>
+            <a href="anketa.html">Анкета</a>
+        </nav>
+
+        <div class="najava">
+            <form id="forma-najava">
+                <input type="text" id="korisnik" placeholder="Корисничко име">
+                <input type="password" id="lozinka" placeholder="Лозинка">
+                <input type="submit" value="Најава" class="kopce">
+                <input type="button" id="kopce-registracija" value="Регистрација">
+            </form>
+            <p id="najaven" class="skrieno">
+                <span id="pozdrav"></span>
+                <input type="button" id="kopce-odjava" value="Одјава">
+            </p>
+        </div>
+    </header>
+
+    <section class="hero hero-mal">
+        <h1>Блог и водич</h1>
+        <p>Статии, совети и листи за градовите што ги сакаме.</p>
+    </section>
+
+    <div id="sodrzina" class="blog">
+
+        <nav class="sodrzina">
+            <h3>Статии</h3>
+            <ul>
+                <li><a href="#ohrid">10 работи што мора да ги видите во Охрид</a></li>
+                <li><a href="#pariz">Париз за 3 дена</a></li>
+                <li><a href="#sovet">Како да патувате со мал буџет</a></li>
+            </ul>
+        </nav>
+
+        <div class="statii">
+            <article id="ohrid" class="statija">
+                <figure>
+                    <img src="sliki/ohrid2.jpg" alt="Охрид">
+                    <figcaption>Охридското Езеро</figcaption>
+                </figure>
+                <p class="datum">4 ноември 2026 · Водич</p>
+                <h2>10 работи што мора да ги видите во Охрид</h2>
+                <p>Охрид е еден од најстарите градови во Европа и е на листата на UNESCO. Еве што не смеете да пропуштите:</p>
+                <ol>
+                    <li>Црквата Св. Јован Канео на карпата над езерото</li>
+                    <li>Самуиловата тврдина</li>
+                    <li>Античкиот театар</li>
+                    <li>Плаошник и црквата Св. Климент и Пантелејмон</li>
+                    <li>Старата чаршија</li>
+                    <li>Манастирот Св. Наум и изворите на Црн Дрим</li>
+                    <li>Заливот на коските, музеј на вода</li>
+                    <li>Прошетка со брод по езерото</li>
+                    <li>Охридска пастрмка во локален ресторан</li>
+                    <li>Зајдисонце на плажата Лабино</li>
+                </ol>
+            </article>
+
+            <article id="pariz" class="statija">
+                <figure>
+                    <img src="sliki/paris2.jpg" alt="Париз">
+                    <figcaption>Париз</figcaption>
+                </figure>
+                <p class="datum">28 октомври 2026 · Итинерар</p>
+                <h2>Париз за 3 дена</h2>
+                <h3>Ден 1</h3>
+                <p>Ајфеловата кула наутро, па прошетка до Трокадеро и крстарење по Сена навечер.</p>
+                <h3>Ден 2</h3>
+                <p>Лувр (резервирајте билет однапред), градините Тиљери и Шанзелизе до Триумфалната порта.</p>
+                <h3>Ден 3</h3>
+                <p>Монмартр и Сакре Кер, па кафе во Латинскиот кварт.</p>
+            </article>
+            <article id="sovet" class="statija">
+                <figure>
+                    <img src="https://picsum.photos/seed/budget/900/400" alt="Патување со мал буџет">
+                    <figcaption>Патување со мал буџет</figcaption>
+                </figure>
+                <p class="datum">20 октомври 2026 · Совети</p>
+                <h2>Како да патувате со мал буџет</h2>
+                <ul>
+                    <li>Резервирајте лет 2–3 месеци однапред.</li>
+                    <li>Патувајте надвор од сезона.</li>
+                    <li>Користете јавен превоз наместо такси.</li>
+                    <li>Јадете таму каде што јадат локалците.</li>
+                    <li>Користете го нашиот планер за да ги следите трошоците.</li>
+                </ul>
+                <p class="citat">„Патувањето е единственото нешто што го купуваш, а те прави побогат.“</p>
+            </article>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Travel Planner &copy; 2026 · Основи на WEB програмирање</p>
+        <p><a href="index.html">Почетна</a> · <a href="galerija.html">Галерија</a> · <a href="blog.html">Блог</a> · <a href="anketa.html">Анкета</a></p>
+    </footer>
+
+    <script src="js/korisnici.js"></script>
+</body>
+</html>

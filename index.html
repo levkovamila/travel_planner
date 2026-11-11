@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Planner | Почетна</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Travel Planner</div>
+        <nav>
+            <a href="index.html" class="aktiven">Почетна</a>
+            <a href="galerija.html">Галерија</a>
+            <a href="blog.html">Блог</a>
+            <a href="anketa.html">Анкета</a>
+        </nav>
+
+        <div class="najava">
+            <form id="forma-najava">
+                <input type="text" id="korisnik" placeholder="Корисничко име">
+                <input type="password" id="lozinka" placeholder="Лозинка">
+                <input type="submit" value="Најава" class="kopce">
+                <input type="button" id="kopce-registracija" value="Регистрација">
+            </form>
+            <!-- JS го прикажува ова по успешна најава -->
+            <p id="najaven" class="skrieno">
+                <span id="pozdrav"></span>
+                <input type="button" id="kopce-odjava" value="Одјава">
+            </p>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-tekst">
+            <h1>Планирај го следното патување</h1>
+            <p>Истражи дестинации, пресметај трошоци и направи свој план.</p>
+            <a href="#planer" class="kopce-golemo">Почни со планирање</a>
+        </div>
+        <figure class="hero-slika">
+            <img src="sliki/ohrid1.jpg" alt="Охрид">
+            <figcaption>Охрид, Св. Јован Канео</figcaption>
+        </figure>
+    </section>
+
+    <div id="sodrzina">
+
+        <!-- ===== РЕГИСТРАЦИЈА: се отвора со копчето во header-от ===== -->
+        <section id="registracija" class="panel skrieno">
+            <h3>Регистрација на нов корисник</h3>
+            <form id="forma-registracija">
+                <p>Корисничко име:<br>
+                <input type="text" id="reg-korisnik" placeholder="на пр. mila"></p>
+
+                <p>Лозинка:<br>
+                <input type="password" id="reg-lozinka" placeholder="најмалку 4 знаци"></p>
+
+                <p>Потврди лозинка:<br>
+                <input type="password" id="reg-lozinka2"></p>
+
+                <input type="submit" value="Регистрирај се" class="kopce">
+                <p id="greska-registracija" class="greska"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Популарни градови</h2>
+            <div class="gradovi">
+
+                <article class="karticka">
+                    <div class="karticka-slika">
+                        <img src="sliki/ohrid1.jpg" alt="Охрид">
+                    </div>
+                    <div class="karticka-tekst">
+                        <span class="kategorija">Природа</span>
+                        <h3>Охрид</h3>
+                        <p>Езерото, старата чаршија и црквата Св. Јован Канео.</p>
+                        <p class="cena">од 40 € / ден</p>
+                    </div>
+                </article>
+
+                <article class="karticka">
+                    <div class="karticka-slika">
+                        <img src="sliki/skopje1.jpg" alt="Скопје">
+                    </div>
+                    <div class="karticka-tekst">
+                        <span class="kategorija">Град</span>
+                        <h3>Скопје</h3>
+                        <p>Старата скопска чаршија, Кале и кањонот Матка.</p>
+                        <p class="cena">од 35 € / ден</p>
+                    </div>
+                </article>
+
+                <article class="karticka">
+                    <div class="karticka-slika">
+                        <img src="sliki/paris1.jpg" alt="Париз">
+                    </div>
+                    <div class="karticka-tekst">
+                        <span class="kategorija">Култура</span>
+                        <h3>Париз</h3>
+                        <p>Ајфеловата кула, Лувр и прошетки покрај Сена.</p>
+                        <p class="cena">од 120 € / ден</p>
+                    </div>
+                </article>
+
+                <article class="karticka">
+                    <div class="karticka-slika">
+                        <img src="sliki/rim1.jpg" alt="Рим">
+                    </div>
+                    <div class="karticka-tekst">
+                        <span class="kategorija">Култура</span>
+                        <h3>Рим</h3>
+                        <p>Колосеумот, Ватикан и најдобрата пица.</p>
+                        <p class="cena">од 100 € / ден</p>
+                    </div>
+                </article>
+
+                <article class="karticka">
+                    <div class="karticka-slika">
+                        <img src="sliki/barcelona.jpg" alt="Барселона">
+                    </div>
+                    <div class="karticka-tekst">
+                        <span class="kategorija">Плажа</span>
+                        <h3>Барселона</h3>
+                        <p>Саграда Фамилија, Ла Рамбла и плажата Барселонета.</p>
+                        <p class="cena">од 90 € / ден</p>
+                    </div>
+                </article>
+
+                <article class="karticka">
+                    <div class="karticka-slika">
+                        <img src="sliki/alpi.jpg" alt="Алпи">
+                    </div>
+                    <div class="karticka-tekst">
+                        <span class="kategorija">Планина</span>
+                        <h3>Алпи</h3>
+                        <p>Скијање во зима, планинарење во лето.</p>
+                        <p class="cena">од 110 € / ден</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <section id="planer">
+            <h2>Мои дестинации</h2>
+
+            <div class="planer">
+
+                <!-- Форма за нова дестинација -->
+                <form id="forma-destinacija" class="panel">
+                    <h3>Додај дестинација</h3>
+
+                    <p>Град:<br>
+                    <input type="text" id="dest-ime" placeholder="на пр. Охрид"></p>
+
+                    <p>Категорија:<br>
+                    <select id="dest-kategorija">
+                        <option value="Природа">Природа</option>
+                        <option value="Град">Град</option>
+                        <option value="Култура">Култура</option>
+                        <option value="Плажа">Плажа</option>
+                        <option value="Планина">Планина</option>
+                    </select></p>
+
+                    <p>Број на денови:<br>
+                    <input type="number" id="dest-denovi" min="1" placeholder="на пр. 3"></p>
+
+                    <p>Сместување по ноќ (€):<br>
+                    <input type="number" id="dest-smestuvanje" min="0" placeholder="на пр. 50"></p>
+
+                    <p>Храна по ден (€):<br>
+                    <input type="number" id="dest-hrana" min="0" placeholder="на пр. 25"></p>
+
+                    <p>Превоз, вкупно (€):<br>
+                    <input type="number" id="dest-prevoz" min="0" placeholder="на пр. 80"></p>
+
+                    <input type="submit" value="Додај" class="kopce">
+                    <p id="greska-destinacija" class="greska"></p>
+                </form>
+                <div class="panel">
+                    <h3>Листа</h3>
+
+                    <!-- Филтри -->
+                    <div class="filtri">
+                        <p>Категорија:<br>
+                        <select id="filter-kategorija">
+                            <option value="site">Сите</option>
+                            <option value="Природа">Природа</option>
+                            <option value="Град">Град</option>
+                            <option value="Култура">Култура</option>
+                            <option value="Плажа">Плажа</option>
+                            <option value="Планина">Планина</option>
+                        </select></p>
+
+                        <p>Максимален буџет (€):<br>
+                        <input type="number" id="filter-budzet" min="0" placeholder="без ограничување"></p>
+
+                        <input type="button" id="kopce-filtriraj" value="Филтрирај" class="kopce">
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Град</th>
+                                <th>Категорија</th>
+                                <th>Денови</th>
+                                <th>Трошоци (€)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-destinacii">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Вкупно</td>
+                                <td></td>
+                                <td></td>
+                                <td id="vkupno-troshoci">0</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <p id="prazna-lista" class="prazno">Сè уште немате додадено дестинации.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <p>Travel Planner &copy; 2026 · Основи на WEB програмирање</p>
+        <p><a href="index.html">Почетна</a> · <a href="galerija.html">Галерија</a> · <a href="blog.html">Блог</a> · <a href="anketa.html">Анкета</a></p>
+    </footer>
+
+    <script src="js/korisnici.js"></script>
+    <script src="js/pocetna.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Planner | Анкета</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Travel Planner</div>
+        <nav>
+            <a href="index.html">Почетна</a>
+            <a href="galerija.html">Галерија</a>
+            <a href="blog.html">Блог</a>
+            <a href="anketa.html" class="aktiven">Анкета</a>
+        </nav>
+
+        <div class="najava">
+            <form id="forma-najava">
+                <input type="text" id="korisnik" placeholder="Корисничко име">
+                <input type="password" id="lozinka" placeholder="Лозинка">
+                <input type="submit" value="Најава" class="kopce">
+                <input type="button" id="kopce-registracija" value="Регистрација">
+            </form>
+            <p id="najaven" class="skrieno">
+                <span id="pozdrav"></span>
+                <input type="button" id="kopce-odjava" value="Одјава">
+            </p>
+        </div>
+    </header>
+
+    <section class="hero hero-mal">
+        <h1>Анкета</h1>
+        <p>Кажете ни какви се вашите впечатоци од сајтот.</p>
+    </section>
+
+    <div id="sodrzina">
+
+        <form id="forma-anketa" class="panel anketa">
+
+            <fieldset>
+                <legend>Лични податоци</legend>
+
+                <p>Име:<br>
+                <input type="text" id="anketa-ime" placeholder="Вашето име"></p>
+
+                <p>Е-пошта:<br>
+                <input type="email" id="anketa-email" placeholder="ime@primer.com"></p>
+
+                <p>Возраст:<br>
+                <select id="anketa-vozrast">
+                    <option value="">-- изберете --</option>
+                    <option value="do18">до 18</option>
+                    <option value="18-25">18–25</option>
+                    <option value="26-40">26–40</option>
+                    <option value="40+">над 40</option>
+                </select></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Впечатоци</legend>
+
+                <p>Колку ви се допаѓа сајтот?<br>
+                <input type="radio" name="ocena" value="1"> 1
+                <input type="radio" name="ocena" value="2"> 2
+                <input type="radio" name="ocena" value="3"> 3
+                <input type="radio" name="ocena" value="4"> 4
+                <input type="radio" name="ocena" value="5"> 5</p>
+
+                <p>Кои делови ги користевте?<br>
+                <input type="checkbox" name="delovi" value="Планер"> Планер
+                <input type="checkbox" name="delovi" value="Галерија"> Галерија
+                <input type="checkbox" name="delovi" value="Блог"> Блог</p>
+
+                <p>Дали би го препорачале сајтот?<br>
+                <input type="radio" name="preporaka" value="Да"> Да
+                <input type="radio" name="preporaka" value="Можеби"> Можеби
+                <input type="radio" name="preporaka" value="Не"> Не</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Коментар</legend>
+                <p>Што би подобриле?<br>
+                <textarea id="anketa-komentar" rows="4" cols="50" placeholder="Вашиот коментар..."></textarea></p>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="Испрати">
+                <input type="reset" value="Исчисти">
+            </p>
+
+            <p id="greska-anketa" class="greska"></p>
+        </form>
+
+        <section id="rezultat-anketa" class="panel skrieno">
+            <h2>Резултати од анкетата</h2>
+            <p id="rezultat-tekst"></p>
+
+            <p>
+                Вкупно одговори: <strong id="broj-odgovori">0</strong> &middot;
+                Просечна оцена: <strong id="prosecna-ocena">0</strong> &middot;
+                Би го препорачале: <strong id="broj-preporaka">0</strong>
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Име</th>
+                        <th>Возраст</th>
+                        <th>Оцена</th>
+                        <th>Делови</th>
+                        <th>Препорака</th>
+                        <th>Коментар</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-odgovori">
+                </tbody>
+            </table>
+
+            <p><input type="button" id="kopce-nov-odgovor" value="Пополни нов одговор" class="kopce"></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Travel Planner &copy; 2026 · Основи на WEB програмирање</p>
+        <p><a href="index.html">Почетна</a> · <a href="galerija.html">Галерија</a> · <a href="blog.html">Блог</a> · <a href="anketa.html">Анкета</a></p>
+    </footer>
+
+    <script src="js/korisnici.js"></script>
+    <script src="js/anketa.js"></script>
+</body>
+</html>
