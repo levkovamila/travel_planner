@@ -50,14 +50,14 @@ header {
 
 nav {
     float: left;
-    margin-left: 40px;
+    margin-left: 25px;
     padding-top: 6px;
 }
 
 nav a {
     color: #d8c9bd;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 14px;
 }
 
 nav a:hover {
@@ -78,7 +78,7 @@ nav a.aktiven {
     padding: 6px 10px;
     border: none;
     border-radius: 8px;
-    width: 130px;
+    width: 100px;
 }
 
 .najava input.kopce {
