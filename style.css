@@ -1,13 +1,3 @@
-/* =========================================
-   Travel Planner - заеднички стил
-   Топли бои (соседни на кругот на бои):
-     #2e1a12 кафеава, #6b1f1f бордо, #b5441b 'рѓа, #e08a2c портокалова, #f2c14e жолта
-   Една ладна боја, спротивна на портокаловата (комплементарна):
-     #1f6f78 петролеј сина, за категории, табела и второто копче
-   Позадини: #faf3e8 крем, #fff1dc светло праска
-   ========================================= */
-
-/* ---------- Општо ---------- */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -33,7 +23,6 @@ a {
     display: none;
 }
 
-/* ---------- Header ---------- */
 header {
     background-color: #2e1a12;
     color: white;
@@ -69,7 +58,6 @@ nav a.aktiven {
     font-weight: bold;
 }
 
-/* Најава во header */
 .najava {
     float: right;
 }
@@ -96,7 +84,6 @@ nav a.aktiven {
     margin-right: 10px;
 }
 
-/* второстепени копчиња во header-от: без позадина, со светла рамка */
 .najava input#kopce-registracija, .najava input#kopce-odjava {
     width: auto;
     background-color: #2e1a12;
@@ -104,8 +91,6 @@ nav a.aktiven {
     border: 1px solid #f2c14e;
     padding: 5px 12px;
 }
-
-/* ---------- Регистрација ---------- */
 #forma-registracija p {
     float: left;
     margin: 0 15px 10px 0;
@@ -120,7 +105,6 @@ nav a.aktiven {
     margin-top: 20px;
 }
 
-/* ---------- Hero ---------- */
 .hero {
     background-color: #6b1f1f;
     background-image: radial-gradient(circle at 50% 120%, rgba(255, 214, 120, 0.95) 0%, rgba(242, 193, 78, 0.6) 15%, rgba(224, 138, 44, 0) 45%),
@@ -193,7 +177,6 @@ nav a.aktiven {
     color: #2e1a12;
 }
 
-/* ---------- Полиња и копчиња ---------- */
 input, select, textarea {
     padding: 7px;
     border: 1px solid #d9c3a5;
@@ -219,7 +202,6 @@ input, select, textarea {
     font-weight: bold;
 }
 
-/* ---------- Листа со градови ---------- */
 .gradovi {
     overflow: hidden;
 }
@@ -281,7 +263,6 @@ input, select, textarea {
     color: #b5441b;
 }
 
-/* ---------- Планер ---------- */
 .panel {
     background-color: white;
     border: 1px solid #ecdcc6;
@@ -300,7 +281,6 @@ input, select, textarea {
     font-size: 0.9em;
 }
 
-/* формата за внес има топла позадина, за да се разликува од листата */
 #forma-destinacija {
     background-color: #fff1dc;
     border: 1px solid #f0d2a6;
@@ -334,7 +314,6 @@ input, select, textarea {
     margin: 0 15px 10px 0;
 }
 
-/* второто копче е во комплементарната боја */
 #kopce-filtriraj {
     background-image: none;
     background-color: #1f6f78;
@@ -348,7 +327,6 @@ input, select, textarea {
     margin-top: 20px;
 }
 
-/* ---------- Табела ---------- */
 table {
     width: 100%;
     margin-top: 10px;
@@ -382,7 +360,6 @@ tbody tr:hover {
     text-align: center;
 }
 
-/* ---------- Галерија ---------- */
 .grad {
     background-color: white;
     border: 1px solid #ecdcc6;
@@ -451,7 +428,6 @@ tbody tr:hover {
     margin-top: 6px;
 }
 
-/* ---------- Блог ---------- */
 .blog {
     overflow: hidden;
 }
@@ -525,7 +501,6 @@ figcaption {
     color: #555555;
 }
 
-/* ---------- Анкета ---------- */
 .anketa {
     width: 60%;
     margin: 0 auto;
@@ -554,7 +529,6 @@ legend {
     color: #1f6f78;
 }
 
-/* ---------- Footer ---------- */
 footer {
     background-color: #2e1a12;
     color: #d8c9bd;
